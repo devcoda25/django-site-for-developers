@@ -1,0 +1,21 @@
+.body-color{
+    background-color: #2d2d39;
+    color: #f1efef;
+}
+
+.navbar{
+    background-color:  #434669;
+}
+
+.button_color{
+    background-color:  #434669;
+    color: rgb(226, 223, 223);
+    font-size: medium;
+}
+.card_color{
+    background-color:  #434669;
+    color: #e6e1e1;
+}
+.card_color ,a {
+    color: #e6e1e1;
+}

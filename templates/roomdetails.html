@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="columns">
+    
+    <div class="column mt-5  is-half">
+        <div class="card m-auto card_color">
+            <div class="card-content">
+              <h1 class="title">{{ roomdetails.name }}</h1>
+              <h1 class="subtitle">{{ roomdetails.topic }}</h1>
+              <h1 class="subtitle">@{{ roomdetails.host.username }}</h1>
+              <p>{{ roomdetails.description }}</p>
+            </div>
+            <footer class="card-footer">
+              <a href="{% url 'update_room' room_id=roomdetails.id %}" class="card-footer-item">Edit</a>
+              <a href="{% url 'confirm_delete_room' room_id=roomdetails.id %}" class="card-footer-item">Delete</a>
+            </footer>
+          </div>
+          
+    </div>
+    <div class="column"></div>
+</div>
+
+
+
+{% endblock content %}
+{% load static %}
+
+<!-- Add more details or styling as desired -->

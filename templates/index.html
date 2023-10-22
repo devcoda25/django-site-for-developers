@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="columns">
+    <div class="column ">{% include 'topics.html' %}</div>
+    <div class="column is-half">
+        {% include 'rooms.html' %}
+    </div>
+    <div class="column"></div>
+</div>
+
+
+{% endblock content %}

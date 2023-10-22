@@ -1,0 +1,21 @@
+{% load static %}
+<aside class="menu m-auto">
+  <p class="menu-label p-5 has-text-bold">
+    General
+  </p>
+  <ul class="menu-list">
+    {% for topic, room_count in topics_and_room_counts.items %}
+    <li class="menu-item has-text-white is-semibold mx-5">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <span class="has-text-weight-bold">{{ topic.name }}</span>
+          <span class="ml-1 has-text-grey-light">({{ room_count }})</span>
+        </div>
+        <div class="column">
+          <button class="button is-normal button_color px-3">Follow</button>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</aside>

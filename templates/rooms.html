@@ -1,0 +1,29 @@
+{% load static %}
+<section class="section">
+  <div class="container">
+    <div class=" ">
+      <p class="subtitle  has-text-left ">
+        Available  Room
+      </P>
+      <p class="subtitle has-text-right m-auto ">
+        <a class="button  button_color is-light m-auto" href="{% url 'create_room' %}">Create a room</a>
+      </p>
+    </div>
+
+    <div class="columns is-centered is-vcentered">
+      <div class="column   ">
+        {% for room in rooms %}
+        <div class="card card_color mb-4">
+          <div class="card-content">
+            <p class="subtitle has-text-grey-light">
+              <a href="{% url 'room_detail' room_id=room.id %}">{{ room.name }}</a>
+            </p>
+            <p class="subtitle has-text-right"><a href=""> Host @{{ room.host }} </a></p>
+            <p class="subtitle has-text-left  is-size-7"><a href=""> {{ room.created }} </a></p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
